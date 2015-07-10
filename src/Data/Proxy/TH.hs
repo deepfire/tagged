@@ -12,6 +12,8 @@ module Data.Proxy.TH
 import Data.Char
 #if __GLASGOW_HASKELL__ < 710
 import Data.Functor
+#else
+import Control.Applicative ((<$>))
 #endif
 #if __GLASGOW_HASKELL__ < 707
 import Data.Version (showVersion)
